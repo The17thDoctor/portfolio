@@ -11,8 +11,8 @@ class ProjectCard extends Component {
 
     render() {
         return <div className="card">
-            <div className="card-image">
-                <figure className="image is-4by3">
+            <div className="card-image soft-shadow">
+                <figure className="image is-16by9">
                     <img alt={this.props.project.title} src={this.props.project.thumbnail}/>
                 </figure>
             </div>
@@ -26,7 +26,7 @@ class ProjectCard extends Component {
                 <div className="content">
                     {this.props.project.shortDesc}
                     <br/>
-                    <time>{this.props.project.date.toLocaleDateString("fr-FR")}</time>
+                    <time>{this.props.project.date}</time>
                 </div>
             </div>
         </div>

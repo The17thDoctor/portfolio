@@ -13,7 +13,7 @@ export default function Project() {
     function getMediaHTML(media) {
         switch (media.type) {
             case "youtube": {
-                return <div style={{position: "relative", width: "100%", paddingBottom: "56.25%"}}>
+                return <div className="box p-O" style={{position: "relative", width: "100%", paddingBottom: "56.25%"}}>
                     <iframe
                         style={{
                             width: "100%", height: "100%",
@@ -28,7 +28,7 @@ export default function Project() {
                 </div>
             }
             case "picture": {
-                return <img className="rounded" alt="Showcase media" src={media.value}/>
+                return <img className="rounded box p-0" alt="Showcase media" src={media.value}/>
             }
             default: {
                 return <div/>

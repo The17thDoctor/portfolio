@@ -36,7 +36,7 @@ class Carousel extends Component {
     getMediaHTML(media) {
         switch (media.type) {
             case "youtube": {
-                return <div style={{position: "relative", width: "100%", paddingBottom: "56.25%"}}>
+                return <div className="soft-shadow" style={{position: "relative", width: "100%", paddingBottom: "56.25%"}}>
                     <iframe
                         style={{
                             width: "100%", height: "100%",
@@ -51,7 +51,7 @@ class Carousel extends Component {
                 </div>
             }
             case "picture": {
-                return <img className="rounded" alt="Showcase media" src={media.value}/>
+                return <img className="rounded soft-shadow" alt="Showcase media" src={media.value}/>
             }
             default: {
                 return <div/>

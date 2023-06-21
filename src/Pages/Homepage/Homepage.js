@@ -1,4 +1,6 @@
 import video from "../../media/main_vid.mp4";
+import cpu from "../../media/cpu.png";
+
 import ProjectCard from "./ProjectCard";
 import projects from "../../Projects/manifest";
 
@@ -18,12 +20,12 @@ export default function Homepage() {
             </div>
         </div>
         <div className="is-flex is-flex-direction-column soft-shadow" style={{height: "30em"}}>
-            <h1 className="title is-1 has-text-centered m-auto p-6">A Propos de moi</h1>
+            <h1 className="title is-1 has-text-centered m-auto pt-6">A Propos</h1>
             <div className="tile is-ancestor m-auto" style={{paddingLeft: "10%", paddingRight: "10%"}}>
                 <div className="tile p-4 is-align-items-center">
                     <div className="mr-5">
                         <figure className="image is-128x128">
-                            <img alt="placeholder" src="https://bulma.io/images/placeholders/128x128.png"/>
+                            <img alt="placeholder" src={cpu}/>
                         </figure>
                     </div>
                     <div>
