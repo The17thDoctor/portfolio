@@ -36,8 +36,10 @@ export default function Project() {
         }
     }
 
+    console.log(project)
+
     return (
-        <div className="pt-5 pb-5" style={{marginLeft: "10%", marginRight: "10%"}}>
+        <div className="pt-5 pb-5 mt-auto mb-auto" style={{marginLeft: "10%", marginRight: "10%"}}>
             <div className="box">
                 <div className="is-inline-flex" style={{width: "100%"}}>
                     <div className="m-2" style={{flex: "1"}}>
@@ -49,10 +51,13 @@ export default function Project() {
                     </div>
                 </div>
             </div>
-            <div className="m-auto box" style={{paddingLeft: "7%", paddingRight: "7%"}}>
-                <h1 className="title is-1 has-text-centered">Plus d'images</h1>
-                <Carousel images={project.secondaryMedia}></Carousel>
-            </div>
+            {
+                project.secondaryMedia !== undefined ?
+                <div className="m-auto box" style={{paddingLeft: "7%", paddingRight: "7%"}}>
+                    <h1 className="title is-1 has-text-centered">Plus d'images</h1>
+                    <Carousel images={project.secondaryMedia}></Carousel>
+                </div> : null
+            }
         </div>
     );
 }

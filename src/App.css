@@ -1,3 +1,7 @@
+.min-h-screen {
+    min-height: 100vh;
+}
+
 .blurred {
     width: inherit;
     height: inherit;
@@ -14,6 +18,11 @@
 
 .rounded {
     border-radius: 1em;
+}
+
+.bottom-rounded {
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
 }
 
 .is-carousel-focused {

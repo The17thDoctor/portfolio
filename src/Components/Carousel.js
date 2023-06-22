@@ -51,7 +51,15 @@ class Carousel extends Component {
                 </div>
             }
             case "picture": {
-                return <img className="rounded soft-shadow" alt="Showcase media" src={media.value}/>
+                return <div className="is-relative">
+                    <img className="rounded soft-shadow" alt="Showcase media" src={media.value}/>
+                    {
+                        media.description !== undefined ?
+                            <div className="has-text-white p-2 bottom-rounded" style={{position: "absolute", bottom: "6px", background: "#000C", width: "100%"}}>
+                                {media.description}
+                            </div> : null
+                    }
+                </div>
             }
             default: {
                 return <div/>
@@ -62,16 +70,19 @@ class Carousel extends Component {
     render() {
         return <div>
             {this.getMediaHTML(this.props.images[this.state.currentImage])}
-            <div className="is-inline-flex mt-2" style={{width: "100%"}}>
-                <div style={{flex: "1"}}/>
-                <span className="button" onClick={this.handlePreviousImage}>&lt;</span>
-                {this.props.images.map((image, index) => {
-                    let focused = this.state.currentImage === index ? "is-carousel-focused" : "is-carousel";
-                    return <img key={index} alt="" src="https://www.svgrepo.com/download/35641/dot.svg" className={"mr-1 ml-1 mt-auto mb-auto " + focused}/>;
-                })}
-                <span className="button" onClick={this.handleNextImage}>&gt;</span>
-                <div style={{flex: "1"}}/>
-            </div>
+            {
+                this.props.images.length > 1 ?
+                <div className="is-inline-flex mt-2" style={{width: "100%"}}>
+                    <div style={{flex: "1"}}/>
+                    <span className="button" onClick={this.handlePreviousImage}>&lt;</span>
+                    {this.props.images.map((image, index) => {
+                        let focused = this.state.currentImage === index ? "is-carousel-focused" : "is-carousel";
+                        return <img key={index} alt="" src="https://www.svgrepo.com/download/35641/dot.svg" className={"mr-1 ml-1 mt-auto mb-auto " + focused}/>;
+                    })}
+                    <span className="button" onClick={this.handleNextImage}>&gt;</span>
+                    <div style={{flex: "1"}}/>
+                </div> : null
+            }
         </div>
     }
 }

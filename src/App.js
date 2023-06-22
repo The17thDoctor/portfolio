@@ -21,7 +21,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App has-background-white-bis is-flex-direction-column" style={{minHeight: "100vh"}}>
+    <div className="App has-background-white-bis is-flex is-flex-direction-column" style={{minHeight: "100vh"}}>
         <Navbar/>
         <RouterProvider router={router} />
         <Footer/>
