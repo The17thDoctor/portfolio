@@ -39,7 +39,7 @@ export default function Homepage() {
                             D'autres projets sont à venir !
                             <br/><br/>
                             Je suis aujourd'hui à la recherche d'une alternance en informatique afin de continuer mes études
-                            en école d'ingénieur.
+                            d'ingénieur au <a target="_blank" rel="noreferrer" href="https://enjmin.cnam.fr">CNAM-ENJMIN</a>.
                         </p>
                     </div>
                 </div>
